@@ -12,8 +12,19 @@ case $1 in
     ;;
     -c) echo "-c option used"
     ;;
+    --) shift
+    break ;;
     *) echo "Option $1 not an option"
     ;;
 esac
 shift
 done
+# iteration over option is finished here.
+# iteration over parameters started.
+num=1
+for param in $@
+do
+echo "#$num: $param"
+num=$(( $num + 1 ))
+done
+
