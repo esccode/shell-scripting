@@ -6,11 +6,13 @@
 while [ -n "$1" ]
 do
 case $1 in
-    -a) echo "-a option used"
+    -a) echo "-a option passed"
     ;;
-    -b) echo "-b option used"
+    -b) param="$2"
+    echo "-b option passed, with value $param"
+    shift
     ;;
-    -c) echo "-c option used"
+    -c) echo "-c option passed"
     ;;
     --) shift
     break ;;
