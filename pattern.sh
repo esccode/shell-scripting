@@ -11,6 +11,8 @@
 
 #ssh $serv_addr $com
 
+test $PWD == $HOME || cd $HOME
+
 echo $1
 echo $2
 echo $3
