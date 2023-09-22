@@ -4,10 +4,6 @@
 # Date: 4/16/2023
 # debug mode: bash -x script.sh
 
-# &&:AND  second statement run if thirst is True
-# ||;OR second statement run if first is false
-
-
 #read -p "Which server do you want to connect: " serv_addr
 # read -p "Which username do you want to use: " user_name
 # ssh ${user_name}@$serv_addr
@@ -15,8 +11,9 @@
 
 #ssh $serv_addr $com
 
-test $PWD == $HOME || cd $HOME
-
+#test $PWD == $HOME || cd $HOME
+echo "you are using $(basename $0)"
+test -z $1 || echo "Hello $1"
 echo $1
 echo $2
 echo $3
