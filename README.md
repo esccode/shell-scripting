@@ -8,7 +8,7 @@
 ls file[!a-z].txt
 ls file[*abc].txt
 
-
+ssssss
 ### shell expansion
 > {1..10}
 > *.txt
